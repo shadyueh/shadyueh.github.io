@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Git | Arkane Git XP]]></title>
   <link href="http://shadyueh.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://shadyueh.github.io/"/>
-  <updated>2014-12-23T18:10:54-04:00</updated>
+  <updated>2014-12-23T18:57:32-04:00</updated>
   <id>http://shadyueh.github.io/</id>
   <author>
     <name><![CDATA[Judgemaster Yueh]]></name>
@@ -18,9 +18,12 @@
     <link href="http://shadyueh.github.io/blog/2014/12/23/removing-last-local-commit/"/>
     <updated>2014-12-23T18:07:56-04:00</updated>
     <id>http://shadyueh.github.io/blog/2014/12/23/removing-last-local-commit</id>
-    <content type="html"><![CDATA[<p><div><script src='https://gist.github.com/4bbc366a19cca950d96c.js?file=gist-remove-last-local-commit.sh'></script>
-<noscript><pre><code>git reset HEAD~1</code></pre></noscript></div>
-</p>
+    <content type="html"><![CDATA[<p><figure class='code'><figcaption><span>gist - removing-last-commit.sh </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git reset HEAD~1
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><figure class='code-highlight-figure'><figcaption class='code-highlight-caption'><span class='code-highlight-caption-title'>gist-remove-last-local-commit.sh</span><a class='code-highlight-caption-link' href='https://gist.github.com/4bbc366a19cca950d96c'>link</a></figcaption><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'>git reset HEAD~1</div></div></pre></div></figure></p>
 ]]></content>
   </entry>
   
