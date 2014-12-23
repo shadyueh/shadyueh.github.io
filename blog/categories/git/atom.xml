@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Git | Arkane Git XP]]></title>
+  <link href="http://shadyueh.github.io/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://shadyueh.github.io/"/>
+  <updated>2014-12-23T18:10:54-04:00</updated>
+  <id>http://shadyueh.github.io/</id>
+  <author>
+    <name><![CDATA[Judgemaster Yueh]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Removing Last Local Commit]]></title>
+    <link href="http://shadyueh.github.io/blog/2014/12/23/removing-last-local-commit/"/>
+    <updated>2014-12-23T18:07:56-04:00</updated>
+    <id>http://shadyueh.github.io/blog/2014/12/23/removing-last-local-commit</id>
+    <content type="html"><![CDATA[<p><div><script src='https://gist.github.com/4bbc366a19cca950d96c.js?file=gist-remove-last-local-commit.sh'></script>
+<noscript><pre><code>git reset HEAD~1</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
+  
+</feed>
