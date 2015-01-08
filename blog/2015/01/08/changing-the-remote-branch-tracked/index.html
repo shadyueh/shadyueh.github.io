@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Removing Last Local Commit - Arkane Git XP</title>
+  <title>Changing the Remote Branch Tracked - Arkane Git XP</title>
   <meta name="author" content="Judgemaster Yueh">
 
   
-  <meta name="description" content="gist - removing-last-commit.sh 1
-git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
-">
+  <meta name="description" content="In another git adventure, a co-worker was having issues with the tracking number that is show when your branch is some commits ahead the one it is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://shadyueh.github.io/blog/2014/12/23/removing-last-local-commit">
+  <link rel="canonical" href="http://shadyueh.github.io/blog/2015/01/08/changing-the-remote-branch-tracked">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Arkane Git XP" type="application/atom+xml">
@@ -70,7 +68,7 @@ git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
   
   <header>
     
-      <h1 class="entry-title">Removing Last Local Commit</h1>
+      <h1 class="entry-title">Changing the Remote Branch Tracked</h1>
     
     
       <p class="meta">
@@ -79,20 +77,26 @@ git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
 
 
 
-<time class='entry-date' datetime='2014-12-23T18:07:56-04:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2014</span></span> <span class='time'>6:07 pm</span></time>
+<time class='entry-date' datetime='2015-01-08T12:05:31-04:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:05 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><figure class='code'><figcaption><span>gist - removing-last-commit.sh </span></figcaption>
+<div class="entry-content"><p>In another git adventure, a co-worker was having issues with the tracking number that is show when your branch is some commits ahead the one it is tracking.</p>
+
+<p>It was because the remote branch tracked wasn&rsquo;t the desired one. So I took a look on urschei&rsquo;s answer on <a href="http://stackoverflow.com/questions/4878249/how-do-i-change-the-remote-a-git-branch-is-tracking">StackOverflow</a>.</p>
+
+<p>And used this to solve the problem:</p>
+
+<figure class='code'><figcaption><span>gist - changing-tracked-remote-branch.sh </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git reset HEAD~1
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git branch branch_name -u new_remote/branch_name
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><figure class='code-highlight-figure'><figcaption class='code-highlight-caption'><span class='code-highlight-caption-title'>gist-remove-last-local-commit.sh</span><a class='code-highlight-caption-link' href='https://gist.github.com/4bbc366a19cca950d96c'>link</a></figcaption><div class='code-highlight'><pre class='code-highlight-pre'><div data-line='1' class='code-highlight-row numbered'><div class='code-highlight-line'>git reset HEAD~1</div></div></pre></div></figure></p>
+
 </div>
 
 
@@ -108,12 +112,12 @@ git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
 
 
 
-<time class='entry-date' datetime='2014-12-23T18:07:56-04:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2014</span></span> <span class='time'>6:07 pm</span></time>
+<time class='entry-date' datetime='2015-01-08T12:05:31-04:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:05 pm</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/git/'>git</a>
+    <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/track/'>track</a>
   
 </span>
 
@@ -122,7 +126,7 @@ git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shadyueh.github.io/blog/2014/12/23/removing-last-local-commit/" data-via="" data-counturl="http://shadyueh.github.io/blog/2014/12/23/removing-last-local-commit/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shadyueh.github.io/blog/2015/01/08/changing-the-remote-branch-tracked/" data-via="" data-counturl="http://shadyueh.github.io/blog/2015/01/08/changing-the-remote-branch-tracked/" >Tweet</a>
   
   
   
@@ -131,10 +135,8 @@ git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/12/23/git-xp/" title="Previous Post: Git XP">&laquo; Git XP</a>
+        <a class="basic-alignment left" href="/blog/2014/12/23/removing-last-local-commit/" title="Previous Post: Removing last local commit">&laquo; Removing last local commit</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/01/08/changing-the-remote-branch-tracked/" title="Next Post: Changing the remote branch tracked">Changing the remote branch tracked &raquo;</a>
       
     </p>
   </footer>

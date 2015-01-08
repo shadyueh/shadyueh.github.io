@@ -9,9 +9,7 @@
   <meta name="author" content="Judgemaster Yueh">
 
   
-  <meta name="description" content="gist - removing-last-commit.sh 1
-git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
-">
+  <meta name="description" content="In another git adventure, a co-worker was having issues with the tracking number that is show when your branch is some commits ahead the one it is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +65,47 @@ git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/08/changing-the-remote-branch-tracked/">Changing the Remote Branch Tracked</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-01-08T12:05:31-04:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:05 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In another git adventure, a co-worker was having issues with the tracking number that is show when your branch is some commits ahead the one it is tracking.</p>
+
+<p>It was because the remote branch tracked wasn&rsquo;t the desired one. So I took a look on urschei&rsquo;s answer on <a href="http://stackoverflow.com/questions/4878249/how-do-i-change-the-remote-a-git-branch-is-tracking">StackOverflow</a>.</p>
+
+<p>And used this to solve the problem:</p>
+
+<figure class='code'><figcaption><span>gist - changing-tracked-remote-branch.sh </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git branch branch_name -u new_remote/branch_name
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -149,6 +188,10 @@ git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/01/08/changing-the-remote-branch-tracked/">Changing the Remote Branch Tracked</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/23/removing-last-local-commit/">Removing Last Local Commit</a>
       </li>
     
@@ -169,7 +212,7 @@ git reset HEAD~1 gist-remove-last-local-commit.shlinkgit reset HEAD~1
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Judgemaster Yueh -
+  Copyright &copy; 2015 - Judgemaster Yueh -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
