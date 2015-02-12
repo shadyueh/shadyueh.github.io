@@ -5,11 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Git XP - Arkane Git XP</title>
+  <title>Removing Last Remote Commit - Arkane Git XP</title>
   <meta name="author" content="Judgemaster Yueh">
 
   
-  <meta name="description" content="I&rsquo;ll try organize the knowledgement and experience I figured out when working with git through these years as a software developer. Most of the &hellip;">
+  <meta name="description" content="gist - removing-last-remote-commit.sh 1
+2
+git reset HEAD^ # remove commit locally
+git push origin +HEAD # force-push the new HEAD commit Answered by &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://shadyueh.github.io/blog/2014/12/23/git-xp/">
+  <link rel="canonical" href="http://shadyueh.github.io/blog/2015/02/08/removing-last-remote-commit/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Arkane Git XP" type="application/atom+xml">
@@ -68,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">Git XP</h1>
+      <h1 class="entry-title">Removing Last Remote Commit</h1>
     
     
       <p class="meta">
@@ -77,18 +80,22 @@
 
 
 
-<time class='entry-date' datetime='2014-12-23T16:48:38-04:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2014</span></span> <span class='time'>4:48 pm</span></time>
+<time class='entry-date' datetime='2015-02-08T16:05:34-04:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:05 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>I&rsquo;ll try organize the knowledgement and experience I figured out when working with git through these years as a software developer.</p>
+<div class="entry-content"><figure class='code'><figcaption><span>gist - removing-last-remote-commit.sh </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git reset HEAD^ <span class="c"># remove commit locally</span>
+</span><span class='line'>git push origin +HEAD <span class="c"># force-push the new HEAD commit</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Most of the content I found wildly searching through surface web fields.</p>
 
-<p>I put this here for myself reference but hope this could be help for everyone has dived in this small place.</p>
+<p>Answered by <a href="http://stackoverflow.com/questions/8225125/remove-last-commit-from-remote-git-repository">knittl</a></p>
 </div>
 
 
@@ -97,14 +104,14 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Judgemater Yueh</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Judgemaster Yueh</span></span>
 
       
 
 
 
 
-<time class='entry-date' datetime='2014-12-23T16:48:38-04:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2014</span></span> <span class='time'>4:48 pm</span></time>
+<time class='entry-date' datetime='2015-02-08T16:05:34-04:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:05 pm</span></time>
       
 
 
@@ -112,7 +119,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shadyueh.github.io/blog/2014/12/23/git-xp/" data-via="" data-counturl="http://shadyueh.github.io/blog/2014/12/23/git-xp/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shadyueh.github.io/blog/2015/02/08/removing-last-remote-commit/" data-via="" data-counturl="http://shadyueh.github.io/blog/2015/02/08/removing-last-remote-commit/" >Tweet</a>
   
   
   
@@ -121,8 +128,10 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2015/01/08/changing-the-remote-branch-tracked/" title="Previous Post: Changing the remote branch tracked">&laquo; Changing the remote branch tracked</a>
       
-        <a class="basic-alignment right" href="/blog/2014/12/23/removing-last-local-commit/" title="Next Post: Removing last local commit">Removing last local commit &raquo;</a>
+      
+        <a class="basic-alignment right" href="/blog/2015/02/12/removing-specific-file-from-staged-area/" title="Next Post: Removing specific file from staged area">Removing specific file from staged area &raquo;</a>
       
     </p>
   </footer>

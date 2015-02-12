@@ -9,7 +9,9 @@
   <meta name="author" content="Judgemaster Yueh">
 
   
-  <meta name="description" content="In another git adventure, a co-worker was having issues with the tracking number that is show when your branch is some commits ahead the one it is &hellip;">
+  <meta name="description" content="1
+git reset HEAD file_name Filters work as well 1
+git reset HEAD *~ # removes the temp files ended in ~ ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +73,80 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2015/02/12/removing-specific-file-from-staged-area/">Removing Specific File From Staged Area</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-02-12T17:13:37-04:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>5:13 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git reset HEAD file_name</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Filters work as well</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git reset HEAD *~ # removes the temp files ended in ~</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/02/08/removing-last-remote-commit/">Removing Last Remote Commit</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-02-08T16:05:34-04:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:05 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><figcaption><span>gist - removing-last-remote-commit.sh </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git reset HEAD^ <span class="c"># remove commit locally</span>
+</span><span class='line'>git push origin +HEAD <span class="c"># force-push the new HEAD commit</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Answered by <a href="http://stackoverflow.com/questions/8225125/remove-last-commit-from-remote-git-repository">knittl</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2015/01/08/changing-the-remote-branch-tracked/">Changing the Remote Branch Tracked</a></h1>
     
     
@@ -89,7 +165,7 @@
 
   <div class="entry-content"><p>In another git adventure, a co-worker was having issues with the tracking number that is show when your branch is some commits ahead the one it is tracking.</p>
 
-<p>It was because the remote branch tracked wasn&rsquo;t the desired one. So I took a look on urschei&rsquo;s answer on <a href="http://stackoverflow.com/questions/4878249/how-do-i-change-the-remote-a-git-branch-is-tracking">StackOverflow</a>.</p>
+<p>It was because the remote branch tracked wasn&rsquo;t the desired one. So I took a look on <a href="http://stackoverflow.com/questions/4878249/how-do-i-change-the-remote-a-git-branch-is-tracking">urschei&rsquo;s answer</a>.</p>
 
 <p>And used this to solve the problem:</p>
 
@@ -134,13 +210,8 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
-<div><script src='https://gist.github.com/4bbc366a19cca950d96c.js'></script>
-<noscript><pre><code>git reset HEAD~1</code></pre></noscript></div>
-
-
-
+<p>// <div><script src='https://gist.github.com/4bbc366a19cca950d96c.js'></script>
+<noscript><pre><code>git reset HEAD~1</code></pre></noscript></div></p>
 </div>
   
   
@@ -192,6 +263,14 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/02/12/removing-specific-file-from-staged-area/">Removing Specific File From Staged Area</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/08/removing-last-remote-commit/">Removing Last Remote Commit</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/01/08/changing-the-remote-branch-tracked/">Changing the Remote Branch Tracked</a>
