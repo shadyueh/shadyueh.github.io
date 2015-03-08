@@ -4,7 +4,7 @@
   <title><![CDATA[Arkane Git XP]]></title>
   <link href="http://shadyueh.github.io/atom.xml" rel="self"/>
   <link href="http://shadyueh.github.io/"/>
-  <updated>2015-03-07T22:08:29-04:00</updated>
+  <updated>2015-03-07T22:25:01-04:00</updated>
   <id>http://shadyueh.github.io/</id>
   <author>
     <name><![CDATA[Judgemaster Yueh]]></name>
@@ -104,11 +104,11 @@
     <link href="http://shadyueh.github.io/blog/2014/12/23/git-xp/"/>
     <updated>2014-12-23T16:48:38-04:00</updated>
     <id>http://shadyueh.github.io/blog/2014/12/23/git-xp</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ll try organize the knowledgement and experience I figured out when working with git through these years as a software developer.</p>
+    <content type="html"><![CDATA[<p>I&rsquo;ll try to organize some knowledgement and experience I figured out when working with git through these years.</p>
 
-<p>Most of the content I found wildly searching through surface web fields.</p>
+<p>Most of the content I&rsquo;ve found wildly swimming on surface web fields.</p>
 
-<p>I put this here for myself reference but hope this could be help for everyone has dived in this small place.</p>
+<p>I put all them here for my own reference, but I hope this could be help everyone has dove in this small place.</p>
 ]]></content>
   </entry>
   
