@@ -4,7 +4,7 @@
   <title><![CDATA[Arkane Git XP]]></title>
   <link href="http://shadyueh.github.io/atom.xml" rel="self"/>
   <link href="http://shadyueh.github.io/"/>
-  <updated>2015-02-12T17:35:01-04:00</updated>
+  <updated>2015-03-07T22:08:29-04:00</updated>
   <id>http://shadyueh.github.io/</id>
   <author>
     <name><![CDATA[Judgemaster Yueh]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Discarding Unstaged Changes]]></title>
+    <link href="http://shadyueh.github.io/blog/2015/03/07/discarding-unstaged-changes/"/>
+    <updated>2015-03-07T21:59:47-04:00</updated>
+    <id>http://shadyueh.github.io/blog/2015/03/07/discarding-unstaged-changes</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span>gist </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clean -df        // removes untracked files
+</span><span class='line'>git checkout -- . // clears unstaged changes</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Removing Specific File From Staged Area]]></title>
@@ -79,8 +93,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>// <div><script src='https://gist.github.com/4bbc366a19cca950d96c.js'></script>
-<noscript><pre><code>git reset HEAD~1</code></pre></noscript></div></p>
+<h1><div><script src='https://gist.github.com/4bbc366a19cca950d96c.js'></script></h1>
+
+<p><noscript><pre><code>git reset HEAD~1</code></pre></noscript></div></p>
 ]]></content>
   </entry>
   

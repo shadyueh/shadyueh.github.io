@@ -9,9 +9,10 @@
   <meta name="author" content="Judgemaster Yueh">
 
   
-  <meta name="description" content="1
-git reset HEAD file_name Filters work as well 1
-git reset HEAD *~ # removes the temp files ended in ~ ">
+  <meta name="description" content="gist 1
+2
+git clean -df // removes untracked files
+git checkout -- . // clears unstaged changes ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +68,40 @@ git reset HEAD *~ # removes the temp files ended in ~ ">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/03/07/discarding-unstaged-changes/">Discarding Unstaged Changes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-03-07T21:59:47-04:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:59 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><figcaption><span>gist </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clean -df        // removes untracked files
+</span><span class='line'>git checkout -- . // clears unstaged changes</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -210,8 +245,9 @@ git reset HEAD *~ # removes the temp files ended in ~ ">
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>// <div><script src='https://gist.github.com/4bbc366a19cca950d96c.js'></script>
-<noscript><pre><code>git reset HEAD~1</code></pre></noscript></div></p>
+<h1><div><script src='https://gist.github.com/4bbc366a19cca950d96c.js'></script></h1>
+
+<p><noscript><pre><code>git reset HEAD~1</code></pre></noscript></div></p>
 </div>
   
   
@@ -265,6 +301,10 @@ git reset HEAD *~ # removes the temp files ended in ~ ">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/03/07/discarding-unstaged-changes/">Discarding Unstaged Changes</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/02/12/removing-specific-file-from-staged-area/">Removing Specific File From Staged Area</a>
       </li>
     
@@ -278,10 +318,6 @@ git reset HEAD *~ # removes the temp files ended in ~ ">
     
       <li class="post">
         <a href="/blog/2014/12/23/removing-last-local-commit/">Removing Last Local Commit</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/23/git-xp/">Git XP</a>
       </li>
     
   </ul>
