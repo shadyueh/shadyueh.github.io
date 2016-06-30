@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://shadyueh.github.io/sitemap.xml 
