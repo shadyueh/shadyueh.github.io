@@ -1,6 +1,0 @@
-name: Arcana
-description: Arcana template for Jekyll
-paginate: 2
-baseurl: ""
-url: "http://shadyueh.github.io"
-gems: [jekyll-paginate,jekyll-gist]
