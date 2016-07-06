@@ -11,6 +11,4 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
-gems:
-  - jekyll-paginate
-  - jekyll-gist
+gems: [jekyll-paginate,jekyll-gist]
