@@ -2,7 +2,7 @@
 title: ShadYueh
 email: shadyueh@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Enjoying time on coding.
+  Enjoying time coding.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://shadyueh.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb

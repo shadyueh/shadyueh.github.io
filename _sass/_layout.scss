@@ -45,6 +45,7 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    background-color: $background-color;
 }
 
 .page-heading {
@@ -205,7 +206,21 @@
 .cover {
     color: rgb(241, 241, 241);
     height: 100%;
-    background: url('/assets/img/bg.jpg') no-repeat center center fixed;
+    /*background: url('/assets/img/bg.jpg') no-repeat center center fixed; */
+/*    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+}
+
+.vidcover {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -226,6 +241,7 @@
     font-size: 18pt;
     border-radius: 50%;
     background-color: rgba(81, 81, 81, 0.2);
+    text-shadow: #000 2px 2px 2px;
 }
 
 .minutes {
@@ -239,6 +255,7 @@
     font-size: 52pt;
     border-radius: 50%;
     background-color: rgba(126, 126, 126, 0.7);
+    text-shadow: #000 2px 2px 2px;
 }
 
 .hours {
@@ -252,6 +269,7 @@
     font-size: 133pt;
     border-radius: 50%;
     background-color: rgba(181, 181, 181, 0.4);
+    text-shadow: #000 2px 2px 2px;
 }
 
 .site-name {
