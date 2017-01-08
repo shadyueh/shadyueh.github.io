@@ -1,3 +1,12 @@
+<!DOCTYPE HTML>
+<!--
+Arcana by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    {% include head.html %}
+<body>
 {% include header.html %}
 <!-- Main -->
 	<section class="wrapper style1">
@@ -7,7 +16,7 @@
 				<section>
 					<header class="major">
 						<h2>{{ page.title }}</h2>
-						<p>Posted {{ page.date | date_to_string }}</p>
+						<p>Posted on {{ page.date | date_to_string }}</p>
 					</header>
 					<div class="row">
 						<div class="8u -2u">
@@ -22,3 +31,6 @@
 		</div>
 	</section>
 {% include footer.html %}
+
+</body>
+</html>
