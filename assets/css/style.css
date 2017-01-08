@@ -839,3 +839,9 @@
 			text-align: center;
 			font-size: 0.9em;
 		}
+
+/* GIST */
+.gist {
+	display: -webkit-flex; /* Safari */
+	display: flex;
+}
