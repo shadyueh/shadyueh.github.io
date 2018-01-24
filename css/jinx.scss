@@ -1,0 +1,35 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+.vidcover {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+/*    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+*/
+}
+
+.page-header {
+    position:relative;
+    background-color: transparent;
+    background-image: none;
+    overflow: hidden;
+}
+
+.main-content{
+    background-color: ghostwhite
+}
+
+body {
+    background-color: ghostwhite
+}
