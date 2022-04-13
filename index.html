@@ -1,16 +1,26 @@
----
-layout: home
----
-
-<div class="home">
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-            {{ post.title }}
-            <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
-          </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style src="./styles.css" ></style>
+</head>
+<body>
+  <header>
+    <nav>
+    <h1>Held Grijo</h1>
+    <ul>
+      <li>About me</li>
+      <li>Resume</li>
+      <li>Portfolio</li>
+      <li>Team</li>
+      <li>Testmonial</li>
+      <li>Blog</li>
+      <li>Contact</li>
+    </ul>
+    </nav>
+  </header>
+</body>
+</html>
