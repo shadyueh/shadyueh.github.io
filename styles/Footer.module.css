@@ -1,0 +1,28 @@
+/* .footer {
+  position: fixed;
+  width: 100vw;
+  overflow: visible!important;
+  z-index: 1001;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+} */
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.footer a span{
+  margin-top: 8px;
+}

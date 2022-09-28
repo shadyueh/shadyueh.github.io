@@ -1,9 +1,49 @@
-html,
-body {
+@font-face {
+  font-family: "PTSans Narrow";
+  src: url("../assets/fonts/PTSansNarrow-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PTSans Narrow Bold";
+  src: url("../assets/fonts/PTSansNarrow-Bold.ttf") format("truetype");
+}
+
+:root {
+  --h1-font: "PTSans Narrow Bold";
+  --h2-font: Poppins, sans-serif;
+  --h3-font: Poppins, sans-serif;
+  --p-font: Poppins, sans-serif;
+  --primary-p-color: #6f6f6f;
+  --secondary-p-color: #8e8e8e;
+  --header-bg-color: #111111;
+  --nav-item-color: #f5f5f5;
+  --top-nav-item-color: #f5f5f5;
+  --hero-bg-color: #111111;
+  --primary-color: #0075f2;
+  --secondary-color: #26ffe6;
+  --primary-button-color: #f5f5f5;
+  --primary-button-hover-color: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "PTSans Narrow";
+  min-height: 100vh;
+  background: rgb(34, 193, 195);
+  background-image: radial-gradient(
+    circle farthest-side at top left,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(67, 117, 183, 1) 65%
+  );
+  /* background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% ); */
 }
 
 a {
@@ -11,8 +51,10 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+p {
+  text-align: justify;
+  text-indent: 1rem;
+  margin: 0.75rem 0;
 }
 
 @media (prefers-color-scheme: dark) {
