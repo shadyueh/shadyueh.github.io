@@ -1,0 +1,40 @@
+/* Override default colors with custom colors */
+.text-primary {
+  color: #124559;
+}
+.bg-primary {
+  background-color: #aec3b0;
+}
+.text-secondary {
+  color: #007a7c;
+}
+.bg-secondary {
+  background-color: #eff6e0;
+}
+.text-tertiary {
+  color: #01161e;
+}
+.bg-tertiary {
+  background-color: #A2DED0;
+}
+
+/* Fade in animation */
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  0% { opacity: 0; }
+  100%   { opacity: 1; }
+}
+
+
+/* Apply animation to .fadein class tags */
+.fadein li {
+  --factor: .5;
+  opacity: 0;
+  animation: fadein 1s ease-in-out forwards;
+}
+
+.fadein li { animation-delay: calc(1s * var(--i) * var(--factor)); }
