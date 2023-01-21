@@ -1,48 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My Professional CV</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link href="./assets/css/theme.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/highlight-theme.css" />
+    <script src="//unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+    <link href="./assets/css/theme.css" rel="stylesheet" type="text/css" />
   </head>
-  <body class="font-sans bg-gray-100">
-    <div class="container mx-auto p-4">
-      <h1 class="text-3xl font-bold text-primary ">My Professional CV</h1>
-      <h2 class="text-2xl font-bold text-primary ">Personal Information</h2>
 
-      <ul class="fadein list-none p-0 bg-secondary">
-        <li class="text-lg font-semibold text-secondary" style="--i: 0">Name: Von Held Grijo</li>
-        <li class="text-lg font-semibold text-secondary" style="--i: 1">Email: held.grijo@gmail.com</li>
-        <li class="text-lg font-semibold text-secondary" style="--i: 2">Location: Manaus - AM - Brazil</li>
-      </ul>
+  <body class="bg-gray-200">
+    <header class="font-sans">
+      <img src="./assets/background.jpg" alt="MacBook Pro" />
+      <h1>Held Grijo</h1>
+      <p>{{ Software Developer }}</p>
+    </header>
 
-      <h2 class="text-2xl font-bold text-primary mt-4">Summary</h2>
-      <p class="text-lg text-secondary">A brief overview of your professional background and skills.</p>
-      
-      <h2 class="text-2xl font-bold text-primary mt-4">Education</h2>
-      <h3 class="text-xl font-semibold text-secondary">Degree Name</h3>
-      <ul class="fadein list-none p-0 bg-secondary">
-        <li class="text-lg font-semibold text-secondary" style="--i: 0">Institution: [Institution Name]</li>
-        <li class="text-lg font-semibold text-secondary" style="--i: 1">Location: [Location]</li>
-        <li class="text-lg font-semibold text-secondary" style="--i: 2">Date: [Date]</li>
-      </ul>
+    <main>
+      <div class="container flex-col lg:w-1/2 mx-auto py-10" >
 
-      <h2 class="text-2xl font-bold text-primary mt-4">Work Experience</h2>
-      <h3 class="text-xl font-semibold text-secondary">Job Title</h3>
-      <ul class="fadein list-none p-0  bg-secondary">
-        <li class="text-lg font-semibold text-secondary" style="--i: 0">Company: [Company Name]</li>
-        <li class="text-lg font-semibold text-secondary" style="--i: 1">Location: [Location]</li>
-        <li class="text-lg font-semibold text-secondary" style="--i: 2">Dates: [Dates]</li>
-        <li class="text-lg font-semibold text-secondary" style="--i: 3">Responsibilities: [Responsibilities]</li>
-      </ul>
+        <section class="section-1 ">
+          <div class="bg-gray-900 rounded-md overflow-hidden mb-10">
+            <div class="flex items-center py-2 px-4 bg-gray-800">
+              <div class="flex items-center">
+                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                <span class="ml-2 w-3 h-3 rounded-full bg-yellow-500"></span>
+                <span class="ml-2 w-3 h-3 rounded-full bg-green-500"></span>
+              </div>
+              <h2 class="text-gray-300 ml-2">Personal Information</h2>
+            </div>
+            <div
+              class="p-3 bg-gradient-to-r from-transparent via-transparent to-cyan-900 p-4"
+            >
+              <pre><code class="language-jsx" >// Personal info of our dear dev
+let dev.profile = {
+  name: "Von Held Grijo",
+  email: "held.grijo@gmail.com",
+  location: { city:'Manaus', uf:'AM', country: 'BR' }
+}</code></pre>
+            </div>
+          </div>
+        </section>
 
-      <h2 class="text-2xl font-bold text-primary mt-4">Skills</h2>
-      <ul class="fadein list-none p-0 bg-secondary">
-        <li class="text-lg font-semibold text-secondary" style="--i: 0">[Skill 1]</li>
-        <li class="text-lg font-semibold text-secondary" style="--i: 1">[Skill 2]</li>
-        <li class="text-lg font-semibold text-secondary" style="--i: 2">[Skill 3]</li>
-      </ul>
-    </div>
+        <section class="section-2">
+          <div class="text-justify mb-10 text-secondary indent-4 mb-10">
+            <h2 class="text-2xl text-primary font-bold mb-4">Summary</h2>
+            <p>
+              I am a highly skilled full stack software developer with extensive
+              experience in coding with HTML, CSS, SASS, SCSS, PHP, JavaScript,
+              ReactJS, NodeJS, and experience working with PostgreSQL, OracleDB,
+              and MySQL databases.
+            </p>
+            <p>
+              I have a proven track record of delivering high-quality software
+              solutions, having worked with web software development at PRODAM,
+              an IT company in Government, as well as mobile app development at
+              FPFTech, an IT institute and at SUBTI, the subsecretary of IT from
+              Manaus City Hall.
+            </p>
+            <p>
+              I am well-versed in Git for code versioning and Gitlab for
+              application deployment. My strong technical skills, wide knowledge
+              in several intersection areas, from coding, testing, to delivering
+              and integrate applications, and ability to work well in a team
+              make me an asset to any organization.
+            </p>
+          </div>
+
+          <div class="bg-gray-900 rounded-md overflow-hidden mb-10">
+            <div class="flex items-center py-2 px-4 bg-gray-800">
+              <div class="flex items-center">
+                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                <span class="ml-2 w-3 h-3 rounded-full bg-yellow-500"></span>
+                <span class="ml-2 w-3 h-3 rounded-full bg-green-500"></span>
+              </div>
+              <h2 class="text-gray-300 ml-2">Education</h2>
+            </div>
+            <div
+              class="p-3 bg-gradient-to-r from-transparent via-transparent to-cyan-900 p-4"
+            >
+              <pre><code class="language-jsx" >// Personal info of our dear dev
+dev.education.push({
+  degree: "B.Sc. in Computing Engineering",
+  institution: "UEA - Universidade do Estado do Amazonas",
+  location: { city:'Manaus', uf:'AM', country: 'BR' },
+  due: 2011
+})</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-3">
+          <div class="bg-gray-900 rounded-md overflow-hidden mb-10">
+            <div class="flex items-center py-2 px-4 bg-gray-800">
+              <div class="flex items-center">
+                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                <span class="ml-2 w-3 h-3 rounded-full bg-yellow-500"></span>
+                <span class="ml-2 w-3 h-3 rounded-full bg-green-500"></span>
+              </div>
+              <h2 class="text-gray-300 ml-2">Work Experience</h2>
+            </div>
+            <div
+              class="p-3 bg-gradient-to-r from-transparent via-transparent to-cyan-900 p-4"
+            >
+              <pre><code class="language-jsx" >// Personal info of our dear dev
+{
+  company: "Manaus City Halll - SEMEF/SUBTI",
+  location: { city:'Manaus', uf:'AM', country: 'BR' },
+  period: { start: 2022, end: now() },
+  reponsabilities: [
+    "Melhoria nos processos de versionamento, qualidade e entrega de software.",
+    "Desenvolvimento de APIs usando SpringBoot, Node e etc."
+  ]
+}</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-4">
+          <div class="bg-gray-900 rounded-md overflow-hidden mb-10">
+            <div class="flex items-center py-2 px-4 bg-gray-800">
+              <div class="flex items-center">
+                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                <span class="ml-2 w-3 h-3 rounded-full bg-yellow-500"></span>
+                <span class="ml-2 w-3 h-3 rounded-full bg-green-500"></span>
+              </div>
+              <h2 class="text-gray-300 ml-2">Skills</h2>
+            </div>
+            <div
+              class="p-3 bg-gradient-to-r from-transparent via-transparent to-cyan-900 p-4"
+            >
+              <pre><code class="language-jsx" >// Personal info of our dear dev
+  [
+    "Flexible and Adaptable",
+    "Problem-Solving",
+    "Teamwork and Collaboration",
+    "Self-Motivated",
+    "Critical Thinking",
+    "Continuous improvement techniques",
+    "New employee mentoring",
+    "Critical Thinking",
+    "Scrum methodology",
+    ]</code></pre>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container mx-auto py-6">
+        <div class="flex justify-between items-center">
+          <div class="text-sm text-gray-400">
+            Copyright © 2023 Held Grijo. All rights reserved.
+          </div>
+          <div class="flex">
+            <a href="#" class="mx-2 text-gray-600 hover:text-teal-500">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="mx-2 text-gray-600 hover:text-teal-500">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="mx-2 text-gray-600 hover:text-teal-500">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const sections = document.querySelectorAll(
+        ".section-1, .section-2, .section-3, .section-4"
+      );
+
+      const options = {
+        rootMargin: "0px 0px -10% 0px",
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+
+    <script>
+      hljs.highlightAll();
+    </script>
   </body>
 </html>

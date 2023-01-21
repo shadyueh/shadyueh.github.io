@@ -1,4 +1,26 @@
+@tailwind base; /* Preflight will be injected here */
+
+@tailwind components;
+
+@tailwind utilities;
+
 /* Override default colors with custom colors */
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@400;700&display=swap");
+
+/* tailwind overrides */
+.font-sans {
+  font-family: "Arsenal", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+.font-mono {
+  font-family: "Fira Code",ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+/* theme colors */
 .text-primary {
   color: #124559;
 }
@@ -9,32 +31,117 @@
   color: #007a7c;
 }
 .bg-secondary {
-  background-color: #eff6e0;
+  background-color: #dbe2cc;
 }
 .text-tertiary {
   color: #01161e;
 }
 .bg-tertiary {
-  background-color: #A2DED0;
+  background-color: #a2ded0;
 }
 
 /* Fade in animation */
 @keyframes fadein {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-  0% { opacity: 0; }
-  100%   { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 
 /* Apply animation to .fadein class tags */
 .fadein li {
-  --factor: .5;
+  --factor: 0.5;
   opacity: 0;
   animation: fadein 1s ease-in-out forwards;
 }
 
-.fadein li { animation-delay: calc(1s * var(--i) * var(--factor)); }
+.fadein li {
+  animation-delay: calc(1s * var(--i) * var(--factor));
+}
+
+header {
+  position: relative; /* Add positioning to allow absolute positioning of child elements */
+  height: 200px; /* Set a fixed height for the banner */
+  width: 100%; /* Set a fixed width for the banner */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(
+    18,
+    69,
+    89,
+    0.9
+  ); /* Add a semi-transparent overlay using the same color as the footer */
+  color: #fff;
+}
+
+header img {
+  position: absolute; /* Position the image behind the title */
+  top: 0;
+  left: 0;
+  width: 100%; /* Fill the width of the parent container */
+  height: 100%; /* Fill the height of the parent container */
+  object-fit: cover; /* Scale the image to cover the entire banner */
+  z-index: -1;
+  opacity: 0.7;
+  mix-blend-mode: multiply;
+}
+
+header h1 {
+  text-align: center;
+  text-shadow: 1px 1px 2px black; /* Add a subtle shadow to the text for visibility */
+  font-size: 3em; /* Increase the font size for visibility */
+}
+
+header p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+  /* Initial styles before animation */
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.section-1.animate,
+.section-2.animate,
+.section-3.animate,
+.section-4.animate {
+  /* Styles for when the section is in view */
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-in-out;
+}
+
+footer {
+  background-color: #124559;
+  color: #eff6e0;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.text-gray-600 {
+  color: #598392;
+}
+
+.hover:text-teal-500 {
+  color: #aec3b0;
+}
