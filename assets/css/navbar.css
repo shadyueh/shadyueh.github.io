@@ -1,0 +1,67 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  color: var(--primary-color);
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hide the toggle button by default */
+.nav-toggle,
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-icon {
+    display: block;
+    line-height: 1.6rem;
+    margin-top: -0.5rem; /* fix vertical centering of this icon */
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-primary-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-links li {
+    padding: 1rem;
+    margin: 0;
+    border: 1px solid;
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    display: block;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+  }
+}
