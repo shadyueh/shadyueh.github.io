@@ -33,7 +33,15 @@
   --accent-quaternary-color: rgb(163, 190, 140);
   --accent-quinary-color: rgb(180, 142, 173);
 
-  --shadow-color: rgba(0, 0, 0, 1);
+  --shadow-color: rgba(0, 0, 0, 0.8);
+}
+
+:root[data-theme="light"] {
+  /* light background colors: Snow Storm +*/
+  --bg-primary-color: rgb(216, 222, 233);
+  --bg-secondary-color: rgb(229, 233, 240);
+  --bg-tertiary-color: rgb(236, 239, 244);
+  --bg-quaternary-color: rgb(234, 234, 234);
 }
 
 * {
@@ -57,10 +65,16 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: var(--p-font);
+  /* font-size: 1.2rem; */
   min-height: 100vh;
+  color: var(--primary-color);
   background: var(--bg-secondary-color);
   /* background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% ); */
-  background-image: linear-gradient( 132.6deg,  var(--bg-secondary-color) 23.3%, var(--bg-primary-color) 84.7% );
+  background-image: linear-gradient(
+    132.6deg,
+    var(--bg-secondary-color) 23.3%,
+    var(--bg-primary-color) 84.7%
+  );
 }
 
 header {
@@ -69,7 +83,7 @@ header {
   overflow: visible !important;
   z-index: 1001;
   background-color: var(--bg-primary-color);
-  color: var(--secondary-color);
+  color: var(--primary-color);
   box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
 }
 
@@ -87,16 +101,12 @@ h2 {
   font-family: var(--h1-font);
 }
 
-/* ul {
-  display: flex;
-  flex-direction: row;
-  align-content: space-around;
+/* a {
+  text-decoration: none;
+  color: var(--accent-quaternary-color);
 }
-
-ul li {
-  list-style: none;
-  padding: .5em 2em;
-  align-items: center;
+a:hover {
+  color: var(--accent-tertiary-color);
 } */
 
 footer {
@@ -113,15 +123,23 @@ footer {
   margin: 60px 20px 30px;
 }
 
-.effex {
+.fx-1 {
   background-image: linear-gradient(
     45deg,
     var(--secondary-color) 15%,
-    var(--primary-color) 65%
+    var(--quaternary-color) 65%
   );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.shadow {
+  filter: drop-shadow(3px 3px 5px var(--shadow-color));
+}
+
+.bevel-1 {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.18);
 }
 
 .title {
