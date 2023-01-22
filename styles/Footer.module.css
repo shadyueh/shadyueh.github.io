@@ -10,10 +10,11 @@
 .footer {
   display: flex;
   flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  padding: 0.5rem 0;
   justify-content: center;
   align-items: center;
+  background-color: var(--bg-primary-color);
+  box-shadow: 0 -2px 5px var(--shadow-color);
 }
 
 .footer a {
@@ -23,6 +24,6 @@
   flex-grow: 1;
 }
 
-.footer a span{
+.footer a span {
   margin-top: 8px;
 }

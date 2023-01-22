@@ -4,11 +4,12 @@ import Layout from "../components/layout";
 export default function Home() {
   return (
     <div className={styles.container}>
-
-
       <main className={styles.main}>
         <section className={styles.slideContent}>
           <h2>Main Skills</h2>
+          <a href="http://www.google.com" target="_blank">
+            Testando link
+          </a>
           <form action="" method="post">
             <fieldset>
               <legend>Address</legend>

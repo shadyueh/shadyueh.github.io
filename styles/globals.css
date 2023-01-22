@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 @font-face {
   font-family: "PTSans Narrow";
   src: url("../assets/fonts/PTSansNarrow-Regular.ttf") format("truetype");
@@ -10,19 +12,46 @@
 
 :root {
   --h1-font: "PTSans Narrow Bold";
-  --h2-font: Poppins, sans-serif;
-  --h3-font: Poppins, sans-serif;
-  --p-font: Poppins, sans-serif;
-  --primary-p-color: #6f6f6f;
-  --secondary-p-color: #8e8e8e;
-  --header-bg-color: #111111;
-  --nav-item-color: #f5f5f5;
-  --top-nav-item-color: #f5f5f5;
-  --hero-bg-color: #111111;
-  --primary-color: #0075f2;
-  --secondary-color: #26ffe6;
-  --primary-button-color: #f5f5f5;
-  --primary-button-hover-color: #f5f5f5;
+  --h2-font: "PTSans Narrow", sans-serif;
+  --h3-font: "PTSans Narrow", sans-serif;
+  --p-font: "Lato", sans-serif;
+
+  /* original colors */
+  /* --primary-color: rgb(0, 171, 179);
+  --secondary-color: rgb(40, 75, 99);
+  --tertiary-color: rgb(178, 178, 178);
+  --quaternary-color: rgb(96, 125, 139);
+  --light-color: rgb(234, 234, 234);
+  --dark-color: rgb(53, 53, 53); */
+
+  /* colors: Frost */
+  --primary-color: rgb(143, 188, 187);
+  --secondary-color: rgb(136, 192, 208);
+  --tertiary-color: rgb(129, 161, 193);
+  --quaternary-color: rgb(94, 129, 172);
+
+  /* dark background colors: Polar Night */
+  --bg-primary-color: rgb(46, 52, 64);
+  --bg-secondary-color: rgb(59, 66, 82);
+  --bg-tertiary-color: rgb(67, 76, 94);
+  --bg-quaternary-color: rgb(76, 86, 106);
+
+  /* highlight colors: Aurora */
+  --accent-primary-color: rgb(191, 97, 106);
+  --accent-secondary-color: rgb(208, 135, 112);
+  --accent-tertiary-color: rgb(235, 203, 139);
+  --accent-quaternary-color: rgb(163, 190, 140);
+  --accent-quinary-color: rgb(180, 142, 173);
+
+  --shadow-color: rgba(0, 0, 0, 0.8);
+}
+
+:root[data-theme="light"] {
+  /* light background colors: Snow Storm +*/
+  --bg-primary-color: rgb(216, 222, 233);
+  --bg-secondary-color: rgb(229, 233, 240);
+  --bg-tertiary-color: rgb(236, 239, 244);
+  --bg-quaternary-color: rgb(234, 234, 234);
 }
 
 * {
@@ -31,38 +60,35 @@
   margin: 0;
 }
 
+html {
+  background-color: var(--bg-tertiary-color);
+}
+
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "PTSans Narrow";
-  min-height: 100vh;
-  background: rgb(34, 193, 195);
-  background-image: radial-gradient(
-    circle farthest-side at top left,
-    rgba(34, 193, 195, 1) 0%,
-    rgba(67, 117, 183, 1) 65%
-  );
-  /* background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% ); */
+  font-family: var(--p-font);
 }
 
 a {
-  color: inherit;
+  color: var(--accent-primary-color);
   text-decoration: none;
 }
 
-p {
-  text-align: justify;
-  text-indent: 1rem;
-  margin: 0.75rem 0;
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: var(--accent-quinary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+/* gradient effect on fonts */
+.effex {
+  background-image: linear-gradient(
+    45deg,
+    var(--secondary-color) 15%,
+    var(--primary-color) 65%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
 }
