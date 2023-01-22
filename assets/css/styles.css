@@ -1,32 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
   --h1-font: "PTSans Narrow";
   --h2-font: "PTSans Narrow", sans-serif;
   --h3-font: "PTSans Narrow", sans-serif;
   --p-font: "Lato", sans-serif;
-  --primary-p-color: #6f6f6f;
-  --secondary-p-color: #8e8e8e;
-  --header-bg-color: #111111;
-  --nav-item-color: #f5f5f5;
-  --top-nav-item-color: #f5f5f5;
-  --footer-bg-color: #fff;
-  /* --primary-color: #0075f2;
-  --secondary-color: #26ffe6;  
-  --tertiary-color: #7fffd4; */
 
-  --primary-color: rgb(0, 171, 179);
+  /* original colors */
+  /* --primary-color: rgb(0, 171, 179);
   --secondary-color: rgb(40, 75, 99);
   --tertiary-color: rgb(178, 178, 178);
   --quaternary-color: rgb(96, 125, 139);
   --light-color: rgb(234, 234, 234);
-  --dark-color: rgb(53, 53, 53);
+  --dark-color: rgb(53, 53, 53); */
 
-  --bg-primary-color: var(--secondary-color);
-  --outline: var(--primary-color)
+  /* colors: Frost */
+  --primary-color: rgb(143, 188, 187);
+  --secondary-color: rgb(136, 192, 208);
+  --tertiary-color: rgb(129, 161, 193);
+  --quaternary-color: rgb(94, 129, 172);
 
-  --primary-button-color: #f5f5f5;
-  --primary-button-hover-color: #f5f5f5;
+  /* dark background colors: Polar Night */
+  --bg-primary-color: rgb(46, 52, 64);
+  --bg-secondary-color: rgb(59, 66, 82);
+  --bg-tertiary-color: rgb(67, 76, 94);
+  --bg-quaternary-color: rgb(76, 86, 106);
+
+  /* highlight colors: Aurora */
+  --accent-primary-color: rgb(191, 97, 106);
+  --accent-secondary-color: rgb(208, 135, 112);
+  --accent-tertiary-color: rgb(235, 203, 139);
+  --accent-quaternary-color: rgb(163, 190, 140);
+  --accent-quinary-color: rgb(180, 142, 173);
+
+  --shadow-color: rgba(0, 0, 0, 1);
 }
 
 * {
@@ -35,16 +42,14 @@
   margin: 0;
 }
 
-@font-face 
-{ 
-font-family: "PTSans Narrow";  
-src: url("../fonts/PTSansNarrow-Regular.ttf") format("truetype"); 
+@font-face {
+  font-family: "PTSans Narrow";
+  src: url("../fonts/PTSansNarrow-Regular.ttf") format("truetype");
 }
 
-@font-face 
-{ 
-font-family: "PTSans Narrow Bold";  
-src: url("../fonts/PTSansNarrow-Bold.ttf") format("truetype"); 
+@font-face {
+  font-family: "PTSans Narrow Bold";
+  src: url("../fonts/PTSansNarrow-Bold.ttf") format("truetype");
 }
 
 body {
@@ -53,15 +58,15 @@ body {
   align-items: center;
   font-family: var(--p-font);
   min-height: 100vh;
-  background: var(--dark-color); 
-  /* background-image: radial-gradient(circle farthest-side at top left, var(--primary-color) 0%, var(--dark-color) 65%);  */
+  background: var(--bg-secondary-color);
   /* background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% ); */
+  background-image: linear-gradient( 132.6deg,  var(--bg-secondary-color) 23.3%, var(--bg-primary-color) 84.7% );
 }
 
 header {
   position: fixed;
   width: 100vw;
-  overflow: visible!important;
+  overflow: visible !important;
   z-index: 1001;
   background-color: var(--bg-primary-color);
   color: var(--secondary-color);
@@ -77,7 +82,8 @@ header {
   padding: 20px 25px;
 } */
 
-h1,h2{
+h1,
+h2 {
   font-family: var(--h1-font);
 }
 
@@ -96,8 +102,8 @@ ul li {
 footer {
   position: fixed;
   width: 100vw;
-  padding: .5em;
-  overflow: visible!important;
+  padding: 0.5em;
+  overflow: visible !important;
   z-index: 1;
   background-color: var(--footer-bg-color);
   box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
@@ -108,7 +114,11 @@ footer {
 }
 
 .effex {
-  background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+  background-image: linear-gradient(
+    45deg,
+    var(--secondary-color) 15%,
+    var(--primary-color) 65%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
