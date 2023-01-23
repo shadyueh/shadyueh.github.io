@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --h1-font: "PTSans Narrow";
+  --h2-font: "PTSans Narrow", sans-serif;
+  --h3-font: "PTSans Narrow", sans-serif;
+  --p-font: "Lato", sans-serif;
+
+  /* original colors */
+  /* --primary-color: rgb(0, 171, 179);
+  --secondary-color: rgb(40, 75, 99);
+  --tertiary-color: rgb(178, 178, 178);
+  --quaternary-color: rgb(96, 125, 139);
+  --light-color: rgb(234, 234, 234);
+  --dark-color: rgb(53, 53, 53); */
+
+  /* colors: Frost */
+  --primary-color: rgb(143, 188, 187);
+  --secondary-color: rgb(136, 192, 208);
+  --tertiary-color: rgb(129, 161, 193);
+  --quaternary-color: rgb(94, 129, 172);
+
+  /* dark background colors: Polar Night */
+  --bg-primary-color: rgb(46, 52, 64);
+  --bg-secondary-color: rgb(59, 66, 82);
+  --bg-tertiary-color: rgb(67, 76, 94);
+  --bg-quaternary-color: rgb(76, 86, 106);
+
+  /* highlight colors: Aurora */
+  --accent-primary-color: rgb(191, 97, 106);
+  --accent-secondary-color: rgb(208, 135, 112);
+  --accent-tertiary-color: rgb(235, 203, 139);
+  --accent-quaternary-color: rgb(163, 190, 140);
+  --accent-quinary-color: rgb(180, 142, 173);
+
+  --shadow-color: rgba(0, 0, 0, 0.8);
+}
+
+:root[data-theme="light"] {
+  /* light background colors: Snow Storm +*/
+  --bg-primary-color: rgb(216, 222, 233);
+  --bg-secondary-color: rgb(229, 233, 240);
+  --bg-tertiary-color: rgb(236, 239, 244);
+  --bg-quaternary-color: rgb(234, 234, 234);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "PTSans Narrow";
+  src: url("../fonts/PTSansNarrow-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PTSans Narrow Bold";
+  src: url("../fonts/PTSansNarrow-Bold.ttf") format("truetype");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--p-font);
+  /* font-size: 1.2rem; */
+  min-height: 100vh;
+  color: var(--primary-color);
+  background: var(--bg-secondary-color);
+  /* background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% ); */
+  background-image: linear-gradient(
+    132.6deg,
+    var(--bg-secondary-color) 23.3%,
+    var(--bg-primary-color) 84.7%
+  );
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  overflow: visible !important;
+  z-index: 1001;
+  background-color: var(--bg-primary-color);
+  color: var(--primary-color);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+}
+
+/* nav {
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+} */
+
+h1,
+h2 {
+  font-family: var(--h1-font);
+}
+
+/* a {
+  text-decoration: none;
+  color: var(--accent-quaternary-color);
+}
+a:hover {
+  color: var(--accent-tertiary-color);
+} */
+
+footer {
+  position: fixed;
+  width: 100vw;
+  padding: 0.5em;
+  overflow: visible !important;
+  z-index: 1;
+  background-color: var(--footer-bg-color);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+}
+
+.main {
+  margin: 60px 20px 30px;
+}
+
+.fx-1 {
+  background-image: linear-gradient(
+    45deg,
+    var(--secondary-color) 15%,
+    var(--quaternary-color) 65%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shadow {
+  filter: drop-shadow(3px 3px 5px var(--shadow-color));
+}
+
+.bevel-1 {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.18);
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 700;
+}

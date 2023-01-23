@@ -1,0 +1,65 @@
+:root {
+  --theme-mode-light: #81a1c1;
+  --theme-mode-dark: rgb(59, 66, 82);
+  --theme-mode-shine: rgb(235, 203, 139);
+  --theme-mode-shadow: rgb(46, 52, 64);
+  --theme-mode-size: 3rem;
+}
+
+.toggle-switch {
+  position: relative;
+  width: var(--theme-mode-size);
+  margin: 1rem;
+}
+
+.toggle-switch label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  position: absolute;
+  display: none;
+}
+
+.toggle-switch .slider {
+  display: flex;
+  align-items: center;
+  width: calc(var(--theme-mode-size));
+  height: calc(var(--theme-mode-size) / 2);
+  border-radius: calc(var(--theme-mode-size) / 4);
+  border: 2px solid var(--theme-mode-dark);
+  transition: 0.3s;
+  background-color: var(--theme-mode-dark);
+}
+
+.toggle-switch .slider::before {
+  content: "";
+  position: absolute;
+  margin-left: calc(var(--theme-mode-size) * 0.07);
+  width: calc(var(--theme-mode-size) / 3);
+  height: calc(var(--theme-mode-size) / 3);
+  border-radius: 50%;
+  box-shadow: inset calc(var(--theme-mode-size) * 0.1) -0.2rem 0px 0px var(--theme-mode-shine);
+  background-color: var(--theme-mode-dark);
+  transition: 0.3s;
+}
+
+.toggle-switch input:checked ~ .slider {
+  background-color: var(--theme-mode-light);
+  background-image: linear-gradient(
+    to right,
+    var(--theme-mode-light) 40%,
+    var(--theme-mode-shine)
+  );
+}
+
+.toggle-switch input:checked ~ .slider::before {
+  transform: translateX(calc(var(--theme-mode-size) * 0.5));
+  background-color: var(--theme-mode-dark);
+  box-shadow: none;
+}
