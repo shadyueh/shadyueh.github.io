@@ -1,6 +1,6 @@
 import styles from '../styles/Navbar.module.css'
 
-export default function Navbar({ children }) {
+export default function NavBar() {
   return (
     <header className={styles.menu}>
       <nav>

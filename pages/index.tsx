@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
@@ -168,6 +168,6 @@ export default function Home() {
   );
 }
 
-Home.getLayout = function getLayout(page) {
+Home.getLayout = function getLayout(page: JSX.Element) {
   return <Layout>{page}</Layout>;
 };
