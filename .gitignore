@@ -3,3 +3,4 @@ package-lock.json
 .next
 .vscode
 .DS_Store
+.dccache
