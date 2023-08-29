@@ -1,0 +1,10 @@
+footer {
+  position: relative;
+  width: 100vw;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-primary-color);
+  box-shadow: 0 -2px 5px var(--shadow-color);
+}
