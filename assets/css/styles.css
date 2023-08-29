@@ -87,40 +87,23 @@ header {
   box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
 }
 
-/* nav {
-  display: flex;
-  height: 60px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 25px;
-} */
-
 h1,
 h2 {
   font-family: var(--h1-font);
 }
 
-/* a {
+a {
   text-decoration: none;
   color: var(--accent-quaternary-color);
 }
+
 a:hover {
   color: var(--accent-tertiary-color);
-} */
-
-footer {
-  position: fixed;
-  width: 100vw;
-  padding: 0.5em;
-  overflow: visible !important;
-  z-index: 1;
-  background-color: var(--footer-bg-color);
-  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
 }
 
 .main {
   margin: 60px 20px 30px;
+  height: calc(100vh - 60px);
 }
 
 .fx-1 {
