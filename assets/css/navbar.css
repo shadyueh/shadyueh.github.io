@@ -3,6 +3,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: var(--primary-color);
+  box-shadow: 0 2px 5px var(--shadow-color);
 }
 
 .nav-logo {
@@ -77,6 +78,5 @@ nav {
 
   .nav-toggle:checked ~ .nav-links {
     display: block;
-    box-shadow: 0px 0px 10px 0px var(--shadow-color);
   }
 }
