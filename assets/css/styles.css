@@ -21,33 +21,39 @@
   margin: 0;
 }
 
-@font-face 
-{ 
-font-family: "PTSans Narrow";  
-src: url("../fonts/PTSansNarrow-Regular.ttf") format("truetype"); 
+@font-face {
+  font-family: "PTSans Narrow";
+  src: url("../fonts/PTSansNarrow-Regular.ttf") format("truetype");
 }
 
-@font-face 
-{ 
-font-family: "PTSans Narrow Bold";  
-src: url("../fonts/PTSansNarrow-Bold.ttf") format("truetype"); 
+@font-face {
+  font-family: "PTSans Narrow Bold";
+  src: url("../fonts/PTSansNarrow-Bold.ttf") format("truetype");
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'PTSans Narrow';
+  font-family: "PTSans Narrow";
   min-height: 100vh;
-  background: rgb(34,193,195); 
-  background-image: radial-gradient(circle farthest-side at top left, rgba(34,193,195,1) 0%, rgba(67,117,183,1) 65%); 
-  /* background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% ); */
+  background: rgb(34, 193, 195);
+  background-image: radial-gradient(
+    circle farthest-side at top left,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(67, 117, 183, 1) 65%
+  );
+  /* background-image: linear-gradient(
+    132.6deg,
+    rgba(71, 139, 214, 1) 23.3%,
+    rgba(37, 216, 211, 1) 84.7%
+  ); */
 }
 
 header {
   position: fixed;
   width: 100vw;
-  overflow: visible!important;
+  overflow: visible !important;
   z-index: 1001;
   background-color: #111;
   color: aquamarine;
@@ -63,8 +69,9 @@ nav {
   padding: 20px 25px;
 }
 
-h1,h2{
-  font-family: 'PTSans Narrow Bold';
+h1,
+h2 {
+  font-family: "PTSans Narrow Bold";
 }
 
 ul {
@@ -75,14 +82,14 @@ ul {
 
 ul li {
   list-style: none;
-  padding: .5em 2em;
+  padding: 0.5em 2em;
   align-items: center;
 }
 
 footer {
   position: fixed;
   width: 100vw;
-  overflow: visible!important;
+  overflow: visible !important;
   z-index: 1001;
   background-color: #fff;
   box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
@@ -93,7 +100,11 @@ footer {
 }
 
 .effex {
-  background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+  background-image: linear-gradient(
+    45deg,
+    var(--secondary-color) 15%,
+    var(--primary-color) 65%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
