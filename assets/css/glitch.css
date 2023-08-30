@@ -1,0 +1,108 @@
+/* Space Mono 700 */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #445DE2;
+    font-family: "Space Mono";
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.glitch-wrap {
+    position: relative;
+    cursor: pointer;
+}
+
+.glitch {
+    font-size: 1rem;
+    display: inline-block;
+}
+
+
+.glitch:before,
+.glitch:after {
+    content: "GLITCH";
+    position: absolute;
+    left: 2px;
+    z-index: -1;
+    visibility: hidden;
+}
+
+.glitch {
+    animation: glitch 1s linear -5s infinite alternate;
+}
+
+.glitch:before {
+    animation: glitchTop 1.2s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch:after {
+    animation: glitchBotom 1.7s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch {
+
+    3%,
+    60% {
+        transform: skew(5deg);
+    }
+
+    62% {
+        transform: translate(-10px, 2px) skew(30deg);
+    }
+
+    64% {
+        transform: translate(6px, -1px) skew(-15deg);
+    }
+
+}
+
+@keyframes glitchTop {
+
+    1%,
+    60% {
+        transform: translate(-2px, 0);
+        visibility: visible;
+    }
+
+    64% {
+        transform: translate(-5px, 1px);
+        visibility: visible;
+    }
+
+    62% {
+        transform: translate(15px, -1px) skew(-13deg);
+        visibility: visible;
+    }
+}
+
+@keyframes glitchBotom {
+
+    1%,
+    64% {
+        transform: translate(-2px, 0);
+        visibility: visible;
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 0);
+        visibility: visible;
+    }
+
+    62% {
+        transform: translate(-22px, 5px) skew(21deg);
+        visibility: visible;
+    }
+}
