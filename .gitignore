@@ -1,8 +1,7 @@
-_site/*
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+node_modules
+dist
+dist-ssr
+*.local
 
-.vscode
 .DS_Store
+.vscode
