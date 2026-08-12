@@ -18,7 +18,7 @@ npm run preview # serve the production build
 
 ## Deploy
 
-Pushing to the `vue` branch triggers the GitHub Actions workflow, which builds the app and publishes it to GitHub Pages (Pages source must be set to "GitHub Actions" in the repo settings).
+Pushing to the `main` branch triggers the GitHub Actions workflow, which builds the app and publishes it to GitHub Pages (Pages source must be set to "GitHub Actions" in the repo settings). You can also trigger a deploy manually via the "Run workflow" button in the Actions tab.
 
 ## Content
 
