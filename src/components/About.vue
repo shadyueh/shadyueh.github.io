@@ -22,13 +22,13 @@ import TerminalWindow from './TerminalWindow.vue'
         </div>
 
         <TerminalWindow title="profile.ts">
-          <pre class="overflow-x-auto font-mono text-sm leading-6 text-terminal-text"><code>const profile = {
-  name: "{{ profile.name }}",
-  email: "{{ profile.email }}",
-  location: {
-    city: "{{ profile.location.city }}",
-    uf: "{{ profile.location.uf }}",
-    country: "{{ profile.location.country }}"
+          <pre class="overflow-x-auto font-mono text-sm leading-6 text-terminal-text"><code><span class="text-nord9">const</span> <span class="text-nord4">profile</span> = {
+  <span class="text-nord4">name</span>: <span class="text-nord14">"{{ profile.name }}"</span>,
+  <span class="text-nord4">email</span>: <span class="text-nord14">"{{ profile.email }}"</span>,
+  <span class="text-nord4">location</span>: {
+    <span class="text-nord4">city</span>: <span class="text-nord14">"{{ profile.location.city }}"</span>,
+    <span class="text-nord4">uf</span>: <span class="text-nord14">"{{ profile.location.uf }}"</span>,
+    <span class="text-nord4">country</span>: <span class="text-nord14">"{{ profile.location.country }}"</span>
   }
 }</code></pre>
         </TerminalWindow>

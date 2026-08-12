@@ -12,11 +12,11 @@ import TerminalWindow from './TerminalWindow.vue'
 
       <div class="max-w-2xl">
         <TerminalWindow title="education.ts">
-          <pre class="overflow-x-auto font-mono text-sm leading-6 text-terminal-text"><code>education.push({
-  degree: "{{ education.degree }}",
-  institution: "{{ education.institution }}",
-  location: "{{ education.location.city }}/{{ education.location.uf }}",
-  due: {{ education.due }}
+          <pre class="overflow-x-auto font-mono text-sm leading-6 text-terminal-text"><code><span class="text-nord4">education</span>.<span class="text-nord8">push</span>({
+  <span class="text-nord4">degree</span>: <span class="text-nord14">"{{ education.degree }}"</span>,
+  <span class="text-nord4">institution</span>: <span class="text-nord14">"{{ education.institution }}"</span>,
+  <span class="text-nord4">location</span>: <span class="text-nord14">"{{ education.location.city }}/{{ education.location.uf }}"</span>,
+  <span class="text-nord4">due</span>: <span class="text-nord15">{{ education.due }}</span>
 })</code></pre>
         </TerminalWindow>
       </div>
