@@ -10,7 +10,14 @@ function periodLabel(start: number, end: number | null): string {
 </script>
 
 <template>
-  <section id="experience" class="scroll-mt-24 py-20">
+  <section
+    id="experience"
+    class="reveal scroll-mt-24 py-20"
+    v-motion
+    :initial="{ opacity: 0, y: 50 }"
+    :visible="{ opacity: 1, y: 0 }"
+    :transition="{ duration: 1000, ease: 'easeOut' }"
+  >
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <h2 class="mb-8 text-3xl font-bold text-heading">
         {{ t('experience.title') }}

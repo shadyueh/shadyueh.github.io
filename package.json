@@ -10,6 +10,7 @@
     "check:i18n": "tsx scripts/check-locales.ts"
   },
   "dependencies": {
+    "@vueuse/motion": "^3.0.3",
     "vue": "^3.5.41"
   },
   "devDependencies": {

@@ -6,7 +6,14 @@ const { content, t } = useI18n()
 </script>
 
 <template>
-  <section id="education" class="scroll-mt-24 bg-surface py-20">
+  <section
+    id="education"
+    class="reveal scroll-mt-24 bg-surface py-20"
+    v-motion
+    :initial="{ opacity: 0, y: 50 }"
+    :visible="{ opacity: 1, y: 0 }"
+    :transition="{ duration: 1000, ease: 'easeOut' }"
+  >
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <h2 class="mb-8 text-3xl font-bold text-heading">
         {{ t('education.title') }}
