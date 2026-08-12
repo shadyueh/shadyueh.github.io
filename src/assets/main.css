@@ -3,6 +3,36 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --bg: #eceff4;
+  --surface: #e5e9f0;
+  --elevated: #d8dee9;
+  --border: #d8dee9;
+  --ink: #2e3440;
+  --muted: #4c566a;
+  --heading: #5e81ac;
+  --accent: #88c0d0;
+  --night: #2e3440;
+  --on-night: #eceff4;
+  --terminal: #2e3440;
+  --terminal-header: #3b4252;
+  --terminal-title: #d8dee9;
+  --terminal-text: #eceff4;
+}
+
+.dark {
+  --bg: #2e3440;
+  --surface: #3b4252;
+  --elevated: #434c5e;
+  --border: #434c5e;
+  --ink: #eceff4;
+  --muted: #d8dee9;
+  --heading: #88c0d0;
+  --accent: #88c0d0;
+  --night: #3b4252;
+  --on-night: #eceff4;
+}
+
 @theme {
   --font-sans: "Arsenal", ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
@@ -11,10 +41,23 @@
   --font-mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas, "Liberation Mono", "Courier New", monospace;
 
-  --color-primary: #124559;
-  --color-secondary: #007a7c;
-  --color-tertiary: #01161e;
-  --color-accent: #aec3b0;
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-elevated: var(--elevated);
+  --color-border: var(--border);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-heading: var(--heading);
+  --color-accent: var(--accent);
+  --color-night: var(--night);
+  --color-on-night: var(--on-night);
+  --color-terminal: var(--terminal);
+  --color-terminal-header: var(--terminal-header);
+  --color-terminal-title: var(--terminal-title);
+  --color-terminal-text: var(--terminal-text);
+  --color-nord-red: #bf616a;
+  --color-nord-yellow: #ebcb8b;
+  --color-nord-green: #a3be8c;
 }
 
 @layer base {
@@ -23,7 +66,7 @@
   }
 
   body {
-    @apply bg-gray-100 font-sans text-tertiary dark:bg-gray-950 dark:text-gray-100;
+    @apply bg-background font-sans text-ink;
     transition:
       background-color 0.3s ease,
       color 0.3s ease;

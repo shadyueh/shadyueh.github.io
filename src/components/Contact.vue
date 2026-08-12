@@ -5,16 +5,16 @@ import { profile, socials } from '../data/cv'
 <template>
   <section id="contact" class="scroll-mt-24 py-20">
     <div class="mx-auto max-w-6xl px-4 text-center sm:px-6">
-      <h2 class="mb-4 text-3xl font-bold text-primary dark:text-accent">
+      <h2 class="mb-4 text-3xl font-bold text-heading">
         Contact
       </h2>
-      <p class="mb-8 text-gray-700 dark:text-gray-300">
+      <p class="mb-8 text-muted">
         Interested in working together? Let's talk.
       </p>
 
       <a
         :href="`mailto:${profile.email}`"
-        class="inline-block rounded-md bg-secondary px-6 py-3 font-semibold text-white transition-colors hover:opacity-90"
+        class="inline-block rounded-md bg-accent px-6 py-3 font-semibold text-night transition-colors hover:opacity-90"
       >
         {{ profile.email }}
       </a>
@@ -25,7 +25,7 @@ import { profile, socials } from '../data/cv'
           :href="socials.github"
           target="_blank"
           rel="noopener"
-          class="font-medium text-gray-600 transition-colors hover:text-secondary dark:text-gray-300 dark:hover:text-accent"
+          class="font-medium text-muted transition-colors hover:text-heading"
         >
           GitHub
         </a>
@@ -34,7 +34,7 @@ import { profile, socials } from '../data/cv'
           :href="socials.linkedin"
           target="_blank"
           rel="noopener"
-          class="font-medium text-gray-600 transition-colors hover:text-secondary dark:text-gray-300 dark:hover:text-accent"
+          class="font-medium text-muted transition-colors hover:text-heading"
         >
           LinkedIn
         </a>
@@ -43,7 +43,7 @@ import { profile, socials } from '../data/cv'
           :href="socials.twitter"
           target="_blank"
           rel="noopener"
-          class="font-medium text-gray-600 transition-colors hover:text-secondary dark:text-gray-300 dark:hover:text-accent"
+          class="font-medium text-muted transition-colors hover:text-heading"
         >
           Twitter
         </a>

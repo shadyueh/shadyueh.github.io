@@ -21,12 +21,12 @@ function close() {
 
 <template>
   <header
-    class="fixed inset-x-0 top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur dark:border-gray-800 dark:bg-gray-950/80"
+    class="fixed inset-x-0 top-0 z-50 border-b border-border bg-elevated/80 backdrop-blur"
   >
     <nav
       class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6"
     >
-      <a href="#top" class="text-lg font-bold text-primary dark:text-accent">
+      <a href="#top" class="text-lg font-bold text-heading">
         Held Grijo
       </a>
 
@@ -35,13 +35,13 @@ function close() {
           v-for="link in links"
           :key="link.href"
           :href="link.href"
-          class="text-sm font-medium text-gray-700 transition-colors hover:text-secondary dark:text-gray-300 dark:hover:text-accent"
+          class="text-sm font-medium text-muted transition-colors hover:text-heading"
         >
           {{ link.label }}
         </a>
         <button
           type="button"
-          class="rounded-md p-2 text-gray-600 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+          class="rounded-md p-2 text-muted transition-colors hover:bg-surface"
           :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
           @click="toggle"
         >
@@ -80,7 +80,7 @@ function close() {
 
       <button
         type="button"
-        class="rounded-md p-2 text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 md:hidden"
+        class="rounded-md p-2 text-muted hover:bg-surface md:hidden"
         aria-label="Toggle menu"
         @click="open = !open"
       >
@@ -117,19 +117,19 @@ function close() {
       </button>
     </nav>
 
-    <div v-if="open" class="border-t border-gray-200 bg-white md:hidden dark:border-gray-800 dark:bg-gray-950">
+    <div v-if="open" class="border-t border-border bg-elevated md:hidden">
       <a
         v-for="link in links"
         :key="link.href"
         :href="link.href"
-        class="block px-6 py-3 text-sm font-medium text-gray-700 transition-colors hover:text-secondary dark:text-gray-300 dark:hover:text-accent"
+        class="block px-6 py-3 text-sm font-medium text-muted transition-colors hover:text-heading"
         @click="close"
       >
         {{ link.label }}
       </a>
       <button
         type="button"
-        class="flex w-full items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 dark:text-gray-300"
+        class="flex w-full items-center gap-2 px-6 py-3 text-sm font-medium text-muted"
         @click="toggle"
       >
         {{ isDark ? 'Light mode' : 'Dark mode' }}

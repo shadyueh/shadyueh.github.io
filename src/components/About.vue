@@ -6,9 +6,7 @@ import TerminalWindow from './TerminalWindow.vue'
 <template>
   <section id="about" class="scroll-mt-24 py-20">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <h2
-        class="mb-8 text-3xl font-bold text-primary dark:text-accent"
-      >
+      <h2 class="mb-8 text-3xl font-bold text-heading">
         About
       </h2>
 
@@ -17,14 +15,14 @@ import TerminalWindow from './TerminalWindow.vue'
           <p
             v-for="(paragraph, index) in summary"
             :key="index"
-            class="text-gray-700 dark:text-gray-300"
+            class="text-muted"
           >
             {{ paragraph }}
           </p>
         </div>
 
         <TerminalWindow title="profile.ts">
-          <pre class="overflow-x-auto font-mono text-sm leading-6 text-gray-200"><code>const profile = {
+          <pre class="overflow-x-auto font-mono text-sm leading-6 text-terminal-text"><code>const profile = {
   name: "{{ profile.name }}",
   email: "{{ profile.email }}",
   location: {
