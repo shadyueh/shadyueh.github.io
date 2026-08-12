@@ -1,22 +1,25 @@
 <script setup lang="ts">
-import { profile, socials } from '../data/cv'
+import { socials } from '../data/cv'
+import { useI18n } from '../i18n/useI18n'
+
+const { content, t } = useI18n()
 </script>
 
 <template>
   <section id="contact" class="scroll-mt-24 bg-surface py-20">
     <div class="mx-auto max-w-6xl px-4 text-center sm:px-6">
       <h2 class="mb-4 text-3xl font-bold text-heading">
-        Contact
+        {{ t('contact.title') }}
       </h2>
       <p class="mb-8 text-muted">
-        Interested in working together? Let's talk.
+        {{ t('contact.subtitle') }}
       </p>
 
       <a
-        :href="`mailto:${profile.email}`"
+        :href="`mailto:${content.profile.email}`"
         class="inline-block rounded-md bg-accent px-6 py-3 font-semibold text-night transition-colors hover:opacity-90"
       >
-        {{ profile.email }}
+        {{ content.profile.email }}
       </a>
 
       <div class="mt-8 flex justify-center gap-6">

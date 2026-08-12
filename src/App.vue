@@ -9,10 +9,15 @@ import Skills from './components/Skills.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import { useTheme } from './composables/useTheme'
+import { useI18n } from './i18n/useI18n'
 
-const { init } = useTheme()
+const { init: initTheme } = useTheme()
+const { init: initI18n } = useI18n()
 
-onMounted(init)
+onMounted(() => {
+  initTheme()
+  initI18n()
+})
 </script>
 
 <template>

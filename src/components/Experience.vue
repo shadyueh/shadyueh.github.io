@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { experience } from '../data/cv'
 import TerminalWindow from './TerminalWindow.vue'
+import { useI18n } from '../i18n/useI18n'
+
+const { content, t } = useI18n()
 
 function periodLabel(start: number, end: number | null): string {
-  return `${start}–${end ?? 'now'}`
+  return `${start}–${end ?? t('experience.now')}`
 }
 </script>
 
@@ -11,12 +13,12 @@ function periodLabel(start: number, end: number | null): string {
   <section id="experience" class="scroll-mt-24 py-20">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <h2 class="mb-8 text-3xl font-bold text-heading">
-        Experience
+        {{ t('experience.title') }}
       </h2>
 
       <div class="grid gap-6 lg:grid-cols-2">
         <TerminalWindow
-          v-for="job in experience"
+          v-for="job in content.experience"
           :key="job.company"
           :title="`${job.company} · ${periodLabel(job.period.start, job.period.end)}`"
         >

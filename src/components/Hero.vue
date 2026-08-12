@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { profile, socials } from '../data/cv'
+import { socials } from '../data/cv'
+import { useI18n } from '../i18n/useI18n'
+
+const { content, t } = useI18n()
 </script>
 
 <template>
@@ -17,11 +20,11 @@ import { profile, socials } from '../data/cv'
     ></div>
 
     <div class="relative z-10 px-6 text-center text-on-night">
-      <h1 class="text-5xl font-bold sm:text-6xl">{{ profile.name }}</h1>
-      <p class="mt-4 font-mono text-xl text-accent">Software Developer</p>
+      <h1 class="text-5xl font-bold sm:text-6xl">{{ content.profile.name }}</h1>
+      <p class="mt-4 font-mono text-xl text-accent">{{ content.profile.headline }}</p>
       <p class="mt-2 text-on-night/80">
-        {{ profile.location.city }} / {{ profile.location.uf }} -
-        {{ profile.location.country }}
+        {{ content.profile.location.city }} / {{ content.profile.location.uf }} -
+        {{ content.profile.location.country }}
       </p>
 
       <div class="mt-8 flex justify-center gap-4">
@@ -29,13 +32,13 @@ import { profile, socials } from '../data/cv'
           href="#contact"
           class="rounded-md bg-accent px-6 py-3 font-semibold text-night transition-colors hover:bg-on-night"
         >
-          Contact
+          {{ t('hero.contact') }}
         </a>
         <a
           href="#about"
           class="rounded-md border border-on-night/60 px-6 py-3 font-semibold text-on-night transition-colors hover:bg-on-night/10"
         >
-          About me
+          {{ t('hero.aboutMe') }}
         </a>
       </div>
 

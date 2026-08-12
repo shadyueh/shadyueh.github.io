@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useTheme } from '../composables/useTheme'
+import { useI18n, type MessageKey } from '../i18n/useI18n'
 
 const { isDark, toggle } = useTheme()
+const { otherLocale, t, setLocale } = useI18n()
 
-const links = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Contact', href: '#contact' },
+const links: { key: MessageKey; href: string }[] = [
+  { key: 'nav.about', href: '#about' },
+  { key: 'nav.experience', href: '#experience' },
+  { key: 'nav.education', href: '#education' },
+  { key: 'nav.skills', href: '#skills' },
+  { key: 'nav.contact', href: '#contact' },
 ]
 
 const open = ref(false)
@@ -37,12 +39,12 @@ function close() {
           :href="link.href"
           class="text-sm font-medium text-muted transition-colors hover:text-heading"
         >
-          {{ link.label }}
+          {{ t(link.key) }}
         </a>
         <button
           type="button"
           class="rounded-md p-2 text-muted transition-colors hover:bg-surface"
-          :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+          :aria-label="isDark ? t('nav.toggleThemeLight') : t('nav.toggleThemeDark')"
           @click="toggle"
         >
           <svg
@@ -76,12 +78,20 @@ function close() {
             />
           </svg>
         </button>
+        <button
+          type="button"
+          class="rounded-md px-2 py-1 font-mono text-sm font-bold text-muted transition-colors hover:bg-surface"
+          :aria-label="t('nav.switchLang')"
+          @click="setLocale(otherLocale)"
+        >
+          {{ t('nav.otherLang') }}
+        </button>
       </div>
 
       <button
         type="button"
         class="rounded-md p-2 text-muted hover:bg-surface md:hidden"
-        aria-label="Toggle menu"
+        :aria-label="t('nav.toggleMenu')"
         @click="open = !open"
       >
         <svg
@@ -125,14 +135,21 @@ function close() {
         class="block px-6 py-3 text-sm font-medium text-muted transition-colors hover:text-heading"
         @click="close"
       >
-        {{ link.label }}
+        {{ t(link.key) }}
       </a>
       <button
         type="button"
         class="flex w-full items-center gap-2 px-6 py-3 text-sm font-medium text-muted"
         @click="toggle"
       >
-        {{ isDark ? 'Light mode' : 'Dark mode' }}
+        {{ isDark ? t('nav.lightMode') : t('nav.darkMode') }}
+      </button>
+      <button
+        type="button"
+        class="flex w-full items-center gap-2 px-6 py-3 text-sm font-medium text-muted"
+        @click="setLocale(otherLocale)"
+      >
+        {{ t('nav.otherLang') }} · {{ t('nav.switchLang') }}
       </button>
     </div>
   </header>
