@@ -19,7 +19,7 @@ useReveal(revealTarget)
         {{ t('skills.title') }}
       </h2>
 
-      <div class="flex flex-wrap gap-3">
+      <div class="flex flex-wrap justify-center gap-3">
         <span
           v-for="skill in content.skills"
           :key="skill"
