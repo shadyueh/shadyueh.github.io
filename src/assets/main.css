@@ -41,8 +41,8 @@
   --accent: #88c0d0;
   --night: var(--nord0);
   --on-night: var(--nord6);
-  --terminal: var(--nord1);
-  --terminal-header: var(--nord2);
+  --terminal: var(--nord2);
+  --terminal-header: var(--nord3);
   --terminal-title: var(--nord4);
   --terminal-text: var(--nord6);
   --selection-bg: var(--nord2);
