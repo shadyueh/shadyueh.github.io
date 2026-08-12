@@ -5,7 +5,7 @@ import { profile, socials } from '../data/cv'
 <template>
   <section
     id="top"
-    class="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-night"
+    class="relative flex min-h-[85vh] items-center justify-center overflow-hidden border-b border-border bg-night"
   >
     <img
       src="/background.jpg"
@@ -16,7 +16,7 @@ import { profile, socials } from '../data/cv'
       class="absolute inset-0 bg-gradient-to-b from-night/80 to-night"
     ></div>
 
-    <div class="relative z-10 px-6 text-center text-white">
+    <div class="relative z-10 px-6 text-center text-on-night">
       <h1 class="text-5xl font-bold sm:text-6xl">{{ profile.name }}</h1>
       <p class="mt-4 font-mono text-xl text-accent">Software Developer</p>
       <p class="mt-2 text-on-night/80">
@@ -27,7 +27,7 @@ import { profile, socials } from '../data/cv'
       <div class="mt-8 flex justify-center gap-4">
         <a
           href="#contact"
-          class="rounded-md bg-accent px-6 py-3 font-semibold text-night transition-colors hover:bg-white"
+          class="rounded-md bg-accent px-6 py-3 font-semibold text-night transition-colors hover:bg-on-night"
         >
           Contact
         </a>

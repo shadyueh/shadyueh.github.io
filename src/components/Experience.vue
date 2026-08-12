@@ -20,7 +20,7 @@ function periodLabel(start: number, end: number | null): string {
           :key="job.company"
           :title="`${job.company} · ${periodLabel(job.period.start, job.period.end)}`"
         >
-          <h4 class="font-bold text-white">{{ job.role }}</h4>
+          <h4 class="font-bold text-terminal-title">{{ job.role }}</h4>
           <p class="font-mono text-sm text-terminal-title">
             {{ job.location.city }} / {{ job.location.uf }}
           </p>
