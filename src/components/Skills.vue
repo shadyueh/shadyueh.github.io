@@ -3,7 +3,7 @@ import { skills } from '../data/cv'
 </script>
 
 <template>
-  <section id="skills" class="scroll-mt-24 bg-surface py-20">
+  <section id="skills" class="scroll-mt-24 py-20">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <h2 class="mb-8 text-3xl font-bold text-heading">
         Skills

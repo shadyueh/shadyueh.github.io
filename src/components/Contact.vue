@@ -3,7 +3,7 @@ import { profile, socials } from '../data/cv'
 </script>
 
 <template>
-  <section id="contact" class="scroll-mt-24 py-20">
+  <section id="contact" class="scroll-mt-24 bg-surface py-20">
     <div class="mx-auto max-w-6xl px-4 text-center sm:px-6">
       <h2 class="mb-4 text-3xl font-bold text-heading">
         Contact
